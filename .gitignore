@@ -2,3 +2,7 @@
 \cache/*
 \artifacts
 \cfg_dev
+\cfg\keys.cfg
+\cfg\mysql.cfg
+\txData
+
