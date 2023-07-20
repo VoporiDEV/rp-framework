@@ -2,3 +2,6 @@
 \cache/*
 \artifacts
 \cfg_dev
+\txData
+
+Start.bat

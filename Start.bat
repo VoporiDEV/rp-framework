@@ -1,1 +1,3 @@
-C:\Users\Administrator\Desktop\Mercy-Framework\artifacts\FXServer.exe +exec cfg/server.cfg
+@echo off
+"C:/Users/Sabastian/Desktop/rp-framework/artifacts//FXServer.exe" +set serverProfile "default"
+pause
