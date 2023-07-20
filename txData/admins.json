@@ -1,0 +1,21 @@
+[
+  {
+    "name": "Vopori",
+    "master": true,
+    "password_hash": "$2a$11$X8ouyfjpYG0iE0mh4RUTzeid8ZZ1aCTCN42ujYqlRbQRBxT7fhJQO",
+    "providers": {
+      "citizenfx": {
+        "id": "Vopori",
+        "identifier": "fivem:2159933",
+        "data": {
+          "sub": "e61938385a91fbe6bd2cb3b9598742f6",
+          "nameid": "https://forum.cfx.re/internal/user/2159933",
+          "name": "Vopori",
+          "picture": "https://forum.cfx.re/user_avatar/forum.cfx.re/vopori/256/695307_2.png",
+          "profile": "https://forum.cfx.re/u/Vopori"
+        }
+      }
+    },
+    "permissions": []
+  }
+]
