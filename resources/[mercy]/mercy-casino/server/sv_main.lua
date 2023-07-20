@@ -51,14 +51,24 @@ Citizen.CreateThread(function()
 
     -- Wheel
 
+   
+    -- [ Functions ] --
+    
+
     EventsModule.RegisterServer("mc-wheel/server/give-reward", function(Source, Slot)
         local Player = PlayerModule.GetPlayerBySource(Source)
         if not Player then return end
         local SlotData = GetSlotData(Slot)
+        local payout = tonumber(SlotData['Amount'])
         if SlotData['Type'] == 'Money' then
             if tonumber(SlotData['Amount']) > 0 then
                 Player.Functions.AddMoney("Casino", tonumber(SlotData['Amount']), "slots-payout")
                 Player.Functions.Notify("wheel-won", 'Congrats, you received $'..SlotData['Amount']..' in chips!', "success")
+                DatabaseModule.Update('INSERT INTO wheel_logs (user, amount, date) VALUES(?, ?, ?)', {
+                    Player.PlayerData.CitizenId, 
+                    payout, 
+                    os.date(),
+                })
             end
         elseif SlotData['Type'] == 'Vehicle' then
             Player.Functions.Notify("wheel-won-car", 'Congrats, you won the car!', "success")
@@ -194,17 +204,21 @@ Citizen.CreateThread(function()
     EventsModule.RegisterServer('mercy-casino/server/buy-chips', function(Source, Amount, Dirty)
         local Player = PlayerModule.GetPlayerBySource(Source)
         if not Player then return end
-
+    if Dirty then
+        if Amount > 0 then
+        Player.Functions.Notify("buy-casino-chips", "You bought $"..Amount.." in chips with the stuff you had..", "success")
+        Player.Functions.AddMoney("Casino", Amount, "buy-casino-chips")
+        else
+        Player.Functions.Notify("buy-casino-chips", "Nothing to trade in..", "error")
+        end
+    else
         if Player.Functions.RemoveMoney("Cash", Amount, "buy-casino-chips") then
             Player.Functions.AddMoney("Casino", Amount, "buy-casino-chips")
-            if Dirty then
-                Player.Functions.Notify("buy-casino-chips", "You bought $"..Amount.." in chips with the stuff you had..", "success")
-            else
-                Player.Functions.Notify("buy-casino-chips", "You bought $"..Amount.." in chips.", "success")
-            end
+            Player.Functions.Notify("buy-casino-chips", "You bought $"..Amount.." in chips.", "success")
         else
             Player.Functions.Notify("buy-casino-chips", "Not enough cash..", "error")
         end
+    end
     end)
 
     CallbackModule.CreateCallback('mercy-casino/server/withdraw-money', function(Source, Cb, Type)

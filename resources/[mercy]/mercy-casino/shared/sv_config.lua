@@ -1,3 +1,3 @@
 ServerConfig = ServerConfig or {}
 
-ServerConfig.WheelVehicle = "adder" -- Vehicle that can be won from the wheel
+ServerConfig.WheelVehicle = "sultanrs" -- Vehicle that can be won from the wheel

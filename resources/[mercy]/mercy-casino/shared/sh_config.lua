@@ -15,8 +15,8 @@ Config = Config or {}
 Config.Casino = {
     ['Rent'] = 750,
 }
-Config.WheelURL = "http://localhost/" -- URL where you host the wheel here.
-Config.TVImage = "https://i.imgur.com/yUoVJ5M.png" -- Image for TV
+Config.WheelURL = "http://50.116.25.40/wheel/" -- URL where you host the wheel here.
+Config.TVImage = "https://i.ytimg.com/vi/Ku5-6msfn28/maxresdefault.jpg" -- Image for TV
 Config.Debug = true
 
 Config.CasinoLocations = {
@@ -107,29 +107,29 @@ Config.Options = {
         },
         ['Slots'] = {
             { ['Id'] = 0,  ['Type'] = 'Money', ['Amount'] = "0",    ['Colour'] = "#000", },
-            { ['Id'] = 1,  ['Type'] = 'Money', ['Amount'] = "500",  ['Colour'] = "#F2ED52", },
+            { ['Id'] = 1,  ['Type'] = 'Money', ['Amount'] = "500",  ['Colour'] = "#FFFF00", },
             { ['Id'] = 2,  ['Type'] = 'Money', ['Amount'] = "0",    ['Colour'] = "#000", },
-            { ['Id'] = 3,  ['Type'] = 'Money', ['Amount'] = "1000", ['Colour'] = "#526FF2", },
+            { ['Id'] = 3,  ['Type'] = 'Money', ['Amount'] = "2000", ['Colour'] = "#33FF5E", },
             { ['Id'] = 4,  ['Type'] = 'Money', ['Amount'] = "0",    ['Colour'] = "#000", },
-            { ['Id'] = 5,  ['Type'] = 'Money', ['Amount'] = "500",  ['Colour'] = "#F2ED52", },
+            { ['Id'] = 5,  ['Type'] = 'Money', ['Amount'] = "500",  ['Colour'] = "#FFFF00", },
             { ['Id'] = 6,  ['Type'] = 'Money', ['Amount'] = "0",    ['Colour'] = "#000", }, 
-            { ['Id'] = 7,  ['Type'] = 'Money', ['Amount'] = "1000", ['Colour'] = "#526FF2", },
+            { ['Id'] = 7,  ['Type'] = 'Money', ['Amount'] = "500", ['Colour'] = "#FFFF00", },
             { ['Id'] = 8,  ['Type'] = 'Money', ['Amount'] = "0",    ['Colour'] = "#000", },
-            { ['Id'] = 9,  ['Type'] = 'Money', ['Amount'] = "500",  ['Colour'] = "#F2ED52", },
+            { ['Id'] = 9,  ['Type'] = 'Money', ['Amount'] = "500",  ['Colour'] = "#FFFF00", },
             { ['Id'] = 10, ['Type'] = 'Money', ['Amount'] = "0",    ['Colour'] = "#000", },
-            { ['Id'] = 11, ['Type'] = 'Money', ['Amount'] = "500",  ['Colour'] = "#F2ED52", },
+            { ['Id'] = 11, ['Type'] = 'Money', ['Amount'] = "10000", ['Colour'] = "#A020F0", },
             { ['Id'] = 12, ['Type'] = 'Money', ['Amount'] = "0",    ['Colour'] = "#000", },
-            { ['Id'] = 13, ['Type'] = 'Money', ['Amount'] = "500",  ['Colour'] = "#F2ED52", },
+            { ['Id'] = 13, ['Type'] = 'Money', ['Amount'] = "500",  ['Colour'] = "#FFFF00", },
             { ['Id'] = 14, ['Type'] = 'Money', ['Amount'] = "0",    ['Colour'] = "#000", },
-            { ['Id'] = 15, ['Type'] = 'Money', ['Amount'] = "1500", ['Colour'] = "#E852F2", },
+            { ['Id'] = 15, ['Type'] = 'Money', ['Amount'] = "500",  ['Colour'] = "#FFFF00", },
             { ['Id'] = 16, ['Type'] = 'Money', ['Amount'] = "0",    ['Colour'] = "#000", },
-            { ['Id'] = 17, ['Type'] = 'Money', ['Amount'] = "500",  ['Colour'] = "#F2ED52", },
+            { ['Id'] = 17, ['Type'] = 'Money', ['Amount'] = "5000",  ['Colour'] = "#33FF5E", },
             { ['Id'] = 18, ['Type'] = 'Money', ['Amount'] = "0",    ['Colour'] = "#000", },
-            { ['Id'] = 19, ['Type'] = 'Money', ['Amount'] = "1500", ['Colour'] = "#E852F2", },
+            { ['Id'] = 19, ['Type'] = 'Money', ['Amount'] = "500",  ['Colour'] = "#FFFF00", },
             { ['Id'] = 20, ['Type'] = 'Money', ['Amount'] = "0",    ['Colour'] = "#000", },
-            { ['Id'] = 21, ['Type'] = 'Money', ['Amount'] = "500",  ['Colour'] = "#F2ED52", },
+            { ['Id'] = 21, ['Type'] = 'Money', ['Amount'] = "500",  ['Colour'] = "#FFFF00", },
             { ['Id'] = 22, ['Type'] = 'Money', ['Amount'] = "0",    ['Colour'] = "#000", },
-            { ['Id'] = 23, ['Type'] = 'Vehicle', ['Model'] = 'sultanrs', ['Colour'] = "#FF0221", },
+            { ['Id'] = 23, ['Type'] = 'Vehicle', ['Model'] = 'sultanrs', ['Colour'] = "#FF0000", },
         }
     },
     ['Slots'] = {

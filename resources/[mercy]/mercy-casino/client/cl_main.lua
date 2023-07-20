@@ -111,23 +111,29 @@ RegisterNetEvent("mercy-casino/client/casino-action", function(Data)
             EventsModule.TriggerServer("mercy-casino/server/buy-chips", ChipsInput['chips-amount'])
         end
     elseif Type == 'BuyDirty' then
-        local Payment = math.random(10, 110)
+        local Payment = 0
         if exports["mercy-inventory"]:HasEnoughOfItem("markedbills", 20) then
             local DidRemove = CallbackModule.SendCallback('mercy-base/server/remove-item', 'markedbills', 20, false, true)
             if DidRemove then
                 Payment = Payment + (250 * 20) -- $5k / $250 per
+            else
+                exports['mercy-ui']:Notify("casino", "You dont have anything to trade in..", "error")
             end
         end
         if exports["mercy-inventory"]:HasEnoughOfItem("cash-rolls", 5, false, true) then
             local DidRemove = CallbackModule.SendCallback('mercy-base/server/remove-item', 'cash-rolls', 5, false, true)
             if DidRemove then
                 Payment = Payment + (30 * 5) -- $150 / $30 per
+            else
+                exports['mercy-ui']:Notify("casino", "You dont have anything to trade in..", "error")
             end
         end
         if exports["mercy-inventory"]:HasEnoughOfItem("cash-bands", 5, false, true) then
             local DidRemove = CallbackModule.SendCallback('mercy-base/server/remove-item', 'cash-bands', 5, false, true)
             if DidRemove then
                 Payment = Payment + (300 * 5) -- $1500, / $300 per
+            else
+                exports['mercy-ui']:Notify("casino", "You dont have anything to trade in..", "error")
             end
         end
         EventsModule.TriggerServer("mercy-casino/server/buy-chips", Payment, true)
@@ -187,10 +193,8 @@ function SetupCasinoPeds()
 end
 
 function HasCasinoMembership()
-    local PlayerData = PlayerModule.GetPlayerData()
-    local CardData = CallbackModule.SendCallback('mercy-base/server/get-membership')
-    if not CardData then return false end
-    return CardData.Info.StateId == PlayerData.CitizenId
+  -- Removed again to test new wheel. If its still bogged feel free to put it back
+    return true
 end
 
 function EnterCasino(Bool)
